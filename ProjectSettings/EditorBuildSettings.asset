@@ -8,7 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 399b16e3e53e948d885a5f1fcc486a96
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 7e212ab94a7f14ce99b20a39dad89569
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 78879e29f79e24fbaa7dd2b43a0189da, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 628d1cd5a1ceb4045b3daafc8474f5b3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
