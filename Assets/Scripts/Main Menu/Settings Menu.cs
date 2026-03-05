@@ -5,7 +5,7 @@ public class SettingsMenu : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject optionsPanel;
     
-    void Start()
+	void Start()
     {
         optionsPanel.SetActive(false);
     }

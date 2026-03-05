@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class LevelSelectorMenu : MonoBehaviour
+{
+    public GameObject mainMenuPanel;
+    public GameObject levelsPanel;
+
+    void Start()
+    {
+        levelsPanel.SetActive(false);
+    }
+    
+    public void goBackToMainMenuFromLevelSelect()
+    {
+        mainMenuPanel.SetActive(true);
+        levelsPanel.SetActive(false);
+    }
+}
