@@ -1,7 +1,16 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MainMenuActions : MonoBehaviour
 {
+    public GameObject mainMenuPanel;
+    public GameObject optionsPanel;
+    
+    public void OpenSettings()
+    {
+        mainMenuPanel.SetActive(false);
+        optionsPanel.SetActive(true);
+    }
     /// <summary>
     /// Quits the game (with a successful state)...
     /// This is for the quit game button(s) on the main menu.
