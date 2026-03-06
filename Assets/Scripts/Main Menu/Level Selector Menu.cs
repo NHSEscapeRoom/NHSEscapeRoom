@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectorMenu : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class LevelSelectorMenu : MonoBehaviour
     {
         mainMenuPanel.SetActive(true);
         levelsPanel.SetActive(false);
+    }
+
+    public void goToTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 }
