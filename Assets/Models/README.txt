@@ -1,1 +1,0 @@
-The .FBX files in here have artifacts from the Unreal export process. One that I would like to mention is that they include both the mesh AND a LOD(s) of the assets.
