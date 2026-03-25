@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class MainMenuActions : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class MainMenuActions : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    
+    public void goToFPSTest()
+    {
+        SceneManager.LoadScene(2);
     }
 }
