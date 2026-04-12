@@ -3,24 +3,20 @@ using UnityEngine.InputSystem;
 
 public class SimpleMove : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    
-    private Rigidbody rb;
+    public float speed = 5f;
     private Vector2 moveInput;
+    private CharacterController controller;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    void Awake() => controller = GetComponent<CharacterController>();
 
-    private void OnMove(InputValue value)
+    public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        Vector3 movement = new Vector3(moveInput.x, 0f, moveInput.y) * moveSpeed;
-        rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+        Vector3 direction = new Vector3(moveInput.x, 0, moveInput.y);
+        controller.Move(direction * speed * Time.deltaTime);
     }
 }
