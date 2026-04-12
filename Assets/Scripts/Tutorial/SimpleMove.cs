@@ -16,7 +16,7 @@ public class SimpleMove : MonoBehaviour
 
     void Update()
     {
-        Vector3 direction = new Vector3(moveInput.x, 0, moveInput.y);
+        Vector3 direction = transform.right * moveInput.x + transform.forward * moveInput.y;
         controller.Move(direction * speed * Time.deltaTime);
     }
 }
