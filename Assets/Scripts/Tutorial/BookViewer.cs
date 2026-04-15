@@ -23,7 +23,7 @@ namespace Tutorial
             currentPageNumber = startPage;
         }
 
-        public void SwapImage(string path)
+        private void SwapImage(string path)
         {
             Sprite newSprite = Resources.Load<Sprite>(path);
             if (newSprite != null)
