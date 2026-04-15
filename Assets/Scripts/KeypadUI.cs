@@ -15,7 +15,7 @@ public class KeypadUI : MonoBehaviour
     private List<int> _currentCode = new();
     private int _currentCodeIndex = -1; // Holds what number we are currently at.
 
-    public int sceneIDToLoadOnCorrectInput = 2;
+    public int sceneIDToLoadOnCorrectInput = 0;
     
     [FormerlySerializedAs("CharacterSlotOne")] public GameObject characterSlotOne;
     [FormerlySerializedAs("CharacterSlotTwo")] public GameObject characterSlotTwo;

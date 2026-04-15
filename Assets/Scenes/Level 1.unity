@@ -1488,7 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeypadUI
   code: 3383
-  sceneIDToLoadOnCorrectInput: 2
+  sceneIDToLoadOnCorrectInput: 0
   characterSlotOne: {fileID: 1186330492}
   characterSlotTwo: {fileID: 1380410879}
   characterSlotThree: {fileID: 1901926458}
