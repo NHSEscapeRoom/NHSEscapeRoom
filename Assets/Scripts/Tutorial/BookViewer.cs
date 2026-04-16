@@ -16,11 +16,13 @@ namespace Tutorial
 
         public int startPage;
 
-        private int currentPageNumber;
+        public GameObject bookPanel;
+        
+        private int _currentPageNumber;
 
         public void Awake()
         {
-            currentPageNumber = startPage;
+            _currentPageNumber = startPage;
         }
 
         private void SwapImage(string path)
@@ -34,30 +36,40 @@ namespace Tutorial
 
         public void NextPage()
         {
-            if (currentPageNumber + 1 > maxNumber)
+            if (_currentPageNumber + 1 > maxNumber)
             {
                 Debug.LogWarning("At the max page");
             }
 
             else
             {
-                currentPageNumber++;
-                SwapImage($"{pathBeforeNumber}{currentPageNumber}{pathAfterNumber}");
+                _currentPageNumber++;
+                SwapImage($"{pathBeforeNumber}{_currentPageNumber}{pathAfterNumber}");
             }
         }
         
         public void PreviousPage()
         {
-            if (currentPageNumber - 1 < minNumber)
+            if (_currentPageNumber - 1 < minNumber)
             {
                 Debug.LogWarning("At the min page");
             }
 
             else
             {
-                currentPageNumber--;
-                SwapImage($"{pathBeforeNumber}{currentPageNumber}{pathAfterNumber}");
+                _currentPageNumber--;
+                SwapImage($"{pathBeforeNumber}{_currentPageNumber}{pathAfterNumber}");
             }
+        }
+
+        public void CloseBookUI()
+        {
+            bookPanel.SetActive(false);
+        }
+
+        public void OpenBookUI()
+        {
+            bookPanel.SetActive(true);
         }
     }
 }
