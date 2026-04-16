@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Tutorial
 {
@@ -8,6 +9,7 @@ namespace Tutorial
         public GameObject book;
 
         public GameObject bookPanel;
+        public GameObject regularPanel;
 
         void Start()
         {
@@ -42,6 +44,7 @@ namespace Tutorial
                     if (hit.transform.gameObject == book)
                     {
                         bookPanel.SetActive(true);
+                        regularPanel.SetActive(false);
                     }
                 }
             }

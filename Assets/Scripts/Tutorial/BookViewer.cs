@@ -17,6 +17,7 @@ namespace Tutorial
         public int startPage;
 
         public GameObject bookPanel;
+        public GameObject regularPanel;
         
         private int _currentPageNumber;
 
@@ -65,6 +66,7 @@ namespace Tutorial
         public void CloseBookUI()
         {
             bookPanel.SetActive(false);
+            regularPanel.SetActive(true);
         }
 
         
