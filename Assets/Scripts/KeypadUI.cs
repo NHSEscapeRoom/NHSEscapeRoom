@@ -222,10 +222,12 @@ public class KeypadUI : MonoBehaviour
     }
     
     public GameObject panel;
+    public GameObject defaultPanel;
 
     public void CloseUI()
     {
         panel.SetActive(false);
+        defaultPanel.SetActive(true);
     }
     
 }

@@ -8,6 +8,8 @@ public class KeypadUIActivator : MonoBehaviour
     public GameObject keypad;
     [FormerlySerializedAs("Panel")] public GameObject panel;
     
+    public GameObject defaultPanel;
+    
     // Autoclose the Keypad. We don't need it unless the user clicks on it.
     void Start()
     {
@@ -40,6 +42,7 @@ public class KeypadUIActivator : MonoBehaviour
                 if (hit.transform.gameObject == keypad)
                 {
                     panel.SetActive(true);
+                    defaultPanel.SetActive(false);
                 }
             }
         }
