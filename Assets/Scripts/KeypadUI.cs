@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class KeypadUI : MonoBehaviour
 {
-    [FormerlySerializedAs("Code")] public int code = 1234;
+    [FormerlySerializedAs("Code")] public int code = 0000;
 
     private List<int> _currentCode = new();
     private int _currentCodeIndex = -1; // Holds what number we are currently at.
@@ -210,7 +210,7 @@ public class KeypadUI : MonoBehaviour
     
     public void EnterClicked()
     {
-        if (int.Parse(string.Join("", _currentCode)) == code)
+        if (int.Parse(string.Join("", _currentCode) /* We use String to join the List of int's here*/) /* And then compare it to an Integer as C# does not have implicit type conversions. */ == code)
         {
             SceneManager.LoadScene(sceneIDToLoadOnCorrectInput);
         }
@@ -219,6 +219,13 @@ public class KeypadUI : MonoBehaviour
             StartCoroutine(FlashIncorrect());
             ClearClicked();
         }
+    }
+    
+    public GameObject panel;
+
+    public void CloseUI()
+    {
+        panel.SetActive(false);
     }
     
 }
