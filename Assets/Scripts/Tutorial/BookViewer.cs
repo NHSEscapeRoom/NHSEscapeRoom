@@ -67,9 +67,6 @@ namespace Tutorial
             bookPanel.SetActive(false);
         }
 
-        public void OpenBookUI()
-        {
-            bookPanel.SetActive(true);
-        }
+        
     }
 }

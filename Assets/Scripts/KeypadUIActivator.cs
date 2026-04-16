@@ -16,11 +16,25 @@ public class KeypadUIActivator : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        Vector2 inputPosition = Vector2.zero;
+        bool inputPressed = false;
+
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            inputPosition = Mouse.current.position.ReadValue();
+            inputPressed = true;
+        }
+        else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+        {
+            inputPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+            inputPressed = true;
+        }
+
+        if (inputPressed)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(inputPosition);
             RaycastHit hit;
-            
+
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.transform.gameObject == keypad)
