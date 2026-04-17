@@ -47,10 +47,4 @@ public class KeypadUIActivator : MonoBehaviour
             }
         }
     }
-    
-    public void ClosePanel()
-    {
-        panel.SetActive(false);
-    }
-
 }
