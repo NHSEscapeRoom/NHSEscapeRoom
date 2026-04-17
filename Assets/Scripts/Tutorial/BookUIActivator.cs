@@ -34,6 +34,8 @@ namespace Tutorial
 
             if (inputPressed)
             {
+                
+                
                 if (Camera.main == null) return;
 
                 Ray ray = Camera.main.ScreenPointToRay(inputPosition);

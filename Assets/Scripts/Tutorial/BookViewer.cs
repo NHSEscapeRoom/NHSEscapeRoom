@@ -24,6 +24,7 @@ namespace Tutorial
         public void Awake()
         {
             _currentPageNumber = startPage;
+            SwapImage($"{pathBeforeNumber}{startPage}{pathAfterNumber}");
         }
 
         private void SwapImage(string path)
