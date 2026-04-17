@@ -1,27 +1,30 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SimpleCamera : MonoBehaviour
+namespace Tutorial
 {
-    public Transform playerBody;
-    public float sensitivity = 3f;
-    public float minPitch = -30f;
-    public float maxPitch = 60f;
-
-    private float pitch = 0f;
-    private Vector2 lookInput;
-
-    public void OnLook(InputValue value)
+    public class SimpleCamera : MonoBehaviour
     {
-        lookInput = value.Get<Vector2>();
-    }
+        public Transform playerBody;
+        public float sensitivity = 3f;
+        public float minPitch = -30f;
+        public float maxPitch = 60f;
 
-    void LateUpdate()
-    {
-        playerBody.Rotate(Vector3.up * lookInput.x * sensitivity);
+        private float pitch = 0f;
+        private Vector2 lookInput;
 
-        pitch -= lookInput.y * sensitivity;
-        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
-        transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        public void OnLook(InputValue value)
+        {
+            lookInput = value.Get<Vector2>();
+        }
+
+        void LateUpdate()
+        {
+            playerBody.Rotate(Vector3.up * lookInput.x * sensitivity);
+
+            pitch -= lookInput.y * sensitivity;
+            pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+            transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        }
     }
 }

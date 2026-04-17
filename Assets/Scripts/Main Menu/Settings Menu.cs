@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class SettingsMenu : MonoBehaviour
+namespace Main_Menu
 {
-    public GameObject mainMenuPanel;
-    public GameObject optionsPanel;
+    public class SettingsMenu : MonoBehaviour
+    {
+        public GameObject mainMenuPanel;
+        public GameObject optionsPanel;
     
-	void Start()
-    {
-        optionsPanel.SetActive(false);
-    }
+        void Start()
+        {
+            optionsPanel.SetActive(false);
+        }
 
-    public void goBackToMainMenu()
-    {
-        mainMenuPanel.SetActive(true);
-        optionsPanel.SetActive(false);
+        public void goBackToMainMenu()
+        {
+            mainMenuPanel.SetActive(true);
+            optionsPanel.SetActive(false);
+        }
     }
 }

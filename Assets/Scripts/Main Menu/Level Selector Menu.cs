@@ -1,29 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelSelectorMenu : MonoBehaviour
+namespace Main_Menu
 {
-    public GameObject mainMenuPanel;
-    public GameObject levelsPanel;
-
-    void Start()
+    public class LevelSelectorMenu : MonoBehaviour
     {
-        levelsPanel.SetActive(false);
-    }
+        public GameObject mainMenuPanel;
+        public GameObject levelsPanel;
+
+        void Start()
+        {
+            levelsPanel.SetActive(false);
+        }
     
-    public void goBackToMainMenuFromLevelSelect()
-    {
-        mainMenuPanel.SetActive(true);
-        levelsPanel.SetActive(false);
-    }
+        public void goBackToMainMenuFromLevelSelect()
+        {
+            mainMenuPanel.SetActive(true);
+            levelsPanel.SetActive(false);
+        }
 
-    public void goToTutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
+        public void goToTutorial()
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
 
-    public void goToLevelOne()
-    {
-        SceneManager.LoadScene("Level 1");
+        public void goToLevelOne()
+        {
+            SceneManager.LoadScene("Level 1");
+        }
     }
 }

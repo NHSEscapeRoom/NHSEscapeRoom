@@ -1,22 +1,25 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SimpleMove : MonoBehaviour
+namespace Tutorial
 {
-    public float speed = 5f;
-    private Vector2 moveInput;
-    private CharacterController controller;
-
-    void Awake() => controller = GetComponent<CharacterController>();
-
-    public void OnMove(InputValue value)
+    public class SimpleMove : MonoBehaviour
     {
-        moveInput = value.Get<Vector2>();
-    }
+        public float speed = 5f;
+        private Vector2 moveInput;
+        private CharacterController controller;
 
-    void Update()
-    {
-        Vector3 direction = transform.right * moveInput.x + transform.forward * moveInput.y;
-        controller.Move(direction * speed * Time.deltaTime);
+        void Awake() => controller = GetComponent<CharacterController>();
+
+        public void OnMove(InputValue value)
+        {
+            moveInput = value.Get<Vector2>();
+        }
+
+        void Update()
+        {
+            Vector3 direction = transform.right * moveInput.x + transform.forward * moveInput.y;
+            controller.Move(direction * speed * Time.deltaTime);
+        }
     }
 }
