@@ -11,10 +11,10 @@ namespace Tutorial
         public string pathBeforeNumber;
         public string pathAfterNumber;
 
-        public int minNumber;
+        public int minNumber = 1;
         public int maxNumber;
 
-        public int startPage;
+        public int startPage = 1;
 
         public GameObject bookPanel;
         public GameObject regularPanel;
