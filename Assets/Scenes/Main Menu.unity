@@ -2788,7 +2788,7 @@ GameObject:
   - component: {fileID: 1558178875}
   - component: {fileID: 1558178874}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Original Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3757,7 @@ GameObject:
   - component: {fileID: 2002818292}
   - component: {fileID: 2002818291}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Porting to Unity Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
