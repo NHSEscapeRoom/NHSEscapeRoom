@@ -1346,7 +1346,7 @@ PrefabInstance:
       addedObject: {fileID: 950640841}
     - targetCorrespondingSourceObject: {fileID: -8122774615464304966, guid: bf9c88f58d00f5e4fa167278991862ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 950640840}
+      addedObject: {fileID: 950640842}
   m_SourcePrefab: {fileID: 100100000, guid: bf9c88f58d00f5e4fa167278991862ef, type: 3}
 --- !u!1 &447060203
 GameObject:
@@ -2887,8 +2887,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8122774615464304966, guid: bf9c88f58d00f5e4fa167278991862ef, type: 3}
   m_PrefabInstance: {fileID: 421477985}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &950640840
-MeshCollider:
+--- !u!114 &950640841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950640838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381e12624ea24ff479cb8c37cbc0353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeypadUIActivator
+  keypad: {fileID: 950640838}
+  panel: {fileID: 1595754576}
+  defaultPanel: {fileID: 0}
+--- !u!65 &950640842
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2905,25 +2920,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3500258507535584380, guid: bf9c88f58d00f5e4fa167278991862ef, type: 3}
---- !u!114 &950640841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950640838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381e12624ea24ff479cb8c37cbc0353d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeypadUIActivator
-  keypad: {fileID: 950640838}
-  panel: {fileID: 1595754576}
-  defaultPanel: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.14737001, y: 1.2840203, z: 1.4969858}
+  m_Center: {x: 0, y: 0.22862339, z: -0.009338826}
 --- !u!1 &953585684
 GameObject:
   m_ObjectHideFlags: 0
